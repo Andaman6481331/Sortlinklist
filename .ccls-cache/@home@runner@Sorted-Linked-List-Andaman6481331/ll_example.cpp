@@ -3,8 +3,8 @@
 #include <iostream>
 using namespace std;
 #include "ll.h"
+#include "circular.h""
 
-void instructions( void );
 
 int main( void )
 { 
@@ -25,8 +25,9 @@ int main( void )
             cin>> item ;
             l.insert_bet( item ); // insert item in list
             l.printList();//print the list out
-        
+            l.printListR_cir();
             break;
+        
          case 2: // delete an element
             // if list is not empty
             if ( !l.isEmpty(  ) ) { 
@@ -47,6 +48,9 @@ int main( void )
             } // end else
 
             break;
+        case 3:
+          break;
+        
          default:
            cout<< "Invalid choice." <<endl;
             instructions();
@@ -69,5 +73,5 @@ void instructions( void )
    cout<< "Enter your choice:\n"
       "   1 to insert an element into the list.\n"
       "   2 to delete an element from the list.\n"
-      "   3 to end."<<endl ;
+      "   3 to end"<<endl ;
 } // end function instructions

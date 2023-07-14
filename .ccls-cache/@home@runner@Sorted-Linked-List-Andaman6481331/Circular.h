@@ -1,11 +1,11 @@
 //circular [2-way circular linked list]
-  void insert_cir(int value);
-  int deletes_cir(int value);
-  void printListR_cir();
+  void insertc(int value);
+  int deletesc(int value);
+  void printListRc();
 };
 
 
-void LL::insert_cir(int value) {
+void LL::insertc(int value) {
   NodePtr newPtr = new Node(value);  // create node & put value in
 
   if (newPtr != nullptr) { 
@@ -36,7 +36,7 @@ void LL::insert_cir(int value) {
 }
 
 // delete a list element
-int LL::deletes_cir(int value) {
+int LL::deletesc(int value) {
   NodePtr currentPtr = hol;  // pointer to current node in list
   NodePtr tempPtr = nullptr; // temporary node pointer
 
@@ -81,7 +81,7 @@ int LL::deletes_cir(int value) {
   return '\0';
 }
 
-void LL::printListR_cir() {
+void LL::printListRc() {
   if (isEmpty()) {
     cout << "The List is empty" << endl;
     return;
